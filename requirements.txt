@@ -1,0 +1,15 @@
+# Pinned to the OpenCV this repository's numbers were measured against.
+# `opencv-python` unpinned now resolves to OpenCV 5, which moves several APIs;
+# `opencv-contrib-python` keeps the modules the later projects in this series
+# need. Nothing here is used as a substitute for the implementation: OpenCV
+# appears in `src/` only inside the comparisons the tests assert.
+numpy>=1.24
+opencv-contrib-python==4.14.0.94
+
+# Only the examples need this. Import it and nothing else in `src/pixels`
+# changes behaviour -- `pixels.figures` is deliberately not imported by
+# `pixels/__init__.py`, so the library works on a machine with no matplotlib.
+matplotlib>=3.7
+
+# Tests.
+pytest>=7.0

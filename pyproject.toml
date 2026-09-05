@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pixels"
+version = "0.1.0"
+description = "From raw pixel arrays to a hand-written Canny, with every claim measured"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Pratyush Vatsa" }]
+keywords = ["computer-vision", "convolution", "canny", "otsu", "teaching", "numpy"]
+dependencies = ["numpy>=1.24", "opencv-contrib-python>=4.8"]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.7"]
+dev = ["pytest>=7.0", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# `pythonpath` means `pytest -q` works from a clean checkout with no install
+# step and no PYTHONPATH export. The examples still need `PYTHONPATH=src` (or a
+# `pip install -e .`) because they are scripts, not tests.
+pythonpath = ["src"]

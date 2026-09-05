@@ -1,0 +1,25 @@
+# The figures under docs/figures/ ARE committed on purpose -- they are the
+# pictures in the README and they are produced by the numbered examples. If you
+# regenerate them, commit the change so the README never shows a stale result.
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+env/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+.vscode/
+.idea/
+*.swp
+.DS_Store
